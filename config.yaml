@@ -1,0 +1,24 @@
+---
+
+target_genome: "Annuum.v1.6.Total"
+read_type: "Single"
+target_gtf: "CaCM334.MYB.ReAnnot.chromosome.sort"
+
+path:
+  genome_data: "/var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/"
+  indexing_data: "/var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/"
+  raw_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/"
+  preprocessed_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/"
+  mapping_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/"
+  exp_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/05.FPKM_TPM/"
+
+fastp:
+  Qcut: 20
+  cut_ratio: "0.7"
+  
+hisat2-bulid:
+  
+hisat2:
+
+stringtie:
+  prefix: "CaCM334" 
