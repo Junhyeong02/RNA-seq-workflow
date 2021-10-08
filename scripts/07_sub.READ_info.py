@@ -1,38 +1,26 @@
-import sys
 import json
-import os
-from glob import glob
 
-path = sys.argv[1]
-path2 = sys.argv[2]
+fw = open(snakemake.output, "w")
 
-# assert os.path.exists(path)
+fw.write("Sample\tMean length of reads\tNumber of raw reads\tNumber of filtered reads\n")
 
-files = sorted(glob(path) + glob(path2))
-# print(files)
+for log in snakemake.input:
+    sample = log.split("/")[-1].replace(".filter.json", "")
+    Read_type = snakemake.params.read_type
 
-print("name\tType\tsample\tRead_type\tRead_length\t#Raw_reads\t#Filtered_reads")
-
-for file_path in files:
-    # print(file_path)    
-    temp = file_path.replace("NoUse/", "").split("/")
-
-    sample = temp[-1].split("_")[0].replace(".filter", "").strip(".json")
-    name, Type = temp[-2].strip().split(".")
-    Read_type = temp[-3]
-
-    with open(file_path) as f:
+    with open(log) as f:
         try:
              json_object = json.load(f)
         except ValueError:
-             print(file_path)
+             print(log)
+             continue
 
         Raw_reads = str(json_object["summary"]["before_filtering"]["total_reads"])
         Read_length = str(json_object["summary"]["before_filtering"]["read1_mean_length"])
         
-        if Read_type == "PE":        
+        if Read_type == "Paired":        
             assert Read_length == str(json_object["summary"]["before_filtering"]["read2_mean_length"])
 
         Filtered_read = str(json_object["summary"]["after_filtering"]["total_reads"])
 
-        print('\t'.join([name, Type, sample, Read_type, Read_length, Raw_reads, Filtered_read]))   
+        fw.write('\t'.join([sample, Read_length, Raw_reads, Filtered_read]) + "\n")   

@@ -1,6 +1,6 @@
 ##### 2021.08.20 #####
 
-#grep "overall alignment rate" ../04.Mapping/*.*/*.log ../04.Mapping/Heinz/*.log > ../SupplData/alignment_rate.txt
+# grep "overall alignment rate" ../04.Mapping/*.*/*.log ../04.Mapping/Heinz/*.log > ../SupplData/alignment_rate.txt
 
 # alingment_rate.txt %s/Heinz/Heinz.tissue/g
 
