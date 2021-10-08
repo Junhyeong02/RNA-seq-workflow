@@ -41,9 +41,10 @@ rule Preprocessing:
         #                                        "|head", "-n", "2", \
         #                                        "|tail", "-n", "1", \
         #                                        "|wc", "-L"], shell = True)) * config["fastp"]["cut_ratio"] , 
-        readqual = subprocess.check_output(["gunzip", "-c", "{input.fq}",\
-                                            "|head", "-n", "1000", "|", "sed", "-n", "'4~4p'",\
-                                            "|tr", "-d", "'\\n'"], shell = True) ,
+        readqual = subprocess.check_output("gunzip -c {input.fq} | head -n 1000 | sed -n '4~4p' |tr -d '\\n'", shell = True)
+        # readqual = subprocess.check_output(["gunzip", "-c", "{input.fq}",\
+        #                                     "|head", "-n", "1000", "|", "sed", "-n", "'4~4p'",\
+        #                                     "|tr", "-d", "'\\n'"], shell = True) ,
         phred = (lambda x: \
                 "" if (max(ord(c) for c in x)-33) <= 41 else "-6")(params.readqual)
 
