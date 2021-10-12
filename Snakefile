@@ -1,5 +1,6 @@
 # snakefile
 
+import sys
 import subprocess
 import numpy as np
 import pandas as pd
@@ -22,8 +23,10 @@ rule Indexing:
     output:
         expand(config["path"]["indexing_data"] + config["target_genome"] + ".{num}.ht2", num = [i for i in range(1, 9)])
     message: ""
+    params: 
+        genome = config["target_genome"]
     shell:
-        "hisat2-build -f {input} {wildcards.genome}" 
+        "hisat2-build -f {input} {params.genome}" 
 
 rule Preprocessing:
     input:
@@ -36,32 +39,13 @@ rule Preprocessing:
     params:
         pair = config["path"]["raw_data"] + "{wildcards.filename}_R2.fastq.gz",
         qcut = config["fastp"]["Qcut"],
-        len_cut = int(subprocess.check_output("gunzip -c {input.fq} | head -n 2 |tail -n 1 |wc -L", shell = True)) * config["fastp"]["cut_ratio"],
-        # len_cut = int(subprocess.check_output(["gunzip", "-c", "{input.fq}", \
-        #                                        "|head", "-n", "2", \
-        #                                        "|tail", "-n", "1", \
-        #                                        "|wc", "-L"], shell = True)) * config["fastp"]["cut_ratio"] , 
-        readqual = subprocess.check_output("gunzip -c {input.fq} | head -n 1000 | sed -n '4~4p' |tr -d '\\n'", shell = True)
-        # readqual = subprocess.check_output(["gunzip", "-c", "{input.fq}",\
-        #                                     "|head", "-n", "1000", "|", "sed", "-n", "'4~4p'",\
-        #                                     "|tr", "-d", "'\\n'"], shell = True) ,
-        phred = (lambda x: \
-                "" if (max(ord(c) for c in x)-33) <= 41 else "-6")(params.readqual)
+        cut_ratio = config["fastp"]["cut_ratio"],
+        read_type = config["read_type"]
 
     threads: workflow.cores * core_ratio
     message: ""
-    run:
-        if config["read_type"] == "Single":
-            shell("fastp -i {input.fq} -o {output.fq1} -l {params.len_cut} \
-                   -q {params.qcut} -w {threads} \
-                   -h {output.html} \
-                   -j {output.json} {phred}; \
-                   touch {output.fq2}") 
-        else:
-            shell("fastp -i {input.fq} -I {parmas.pair} -o {output.fq1} -O {output.fq2} \
-                   -l {params.lencut} -q {params.qcut} -w {threads}) \
-                   -h {output.html} \
-                   -j {output.json} {phred};") 
+    script:
+        "scripts/03.smk.fastp.py"
 
 rule Mapping:
     input:
@@ -77,14 +61,14 @@ rule Mapping:
     message: ""
     run:
         if config["read_type"] == "Single":         
-           shell("hisat2 -p {threads} --dta -x {params.index_path} \
-                  --rna-strandness R --summary-file {output.log} \
-                  -U {input.fq1} -S {output.sam}")
+           shell("hisat2 -p {threads} --dta -x {params.index_path}"+\
+                 " --rna-strandness R --summary-file {output.log}" +\
+                 " -U {input.fq1} -S {output.sam}")
 
         else:
-           shell("hisat2 -p {threads} --dta -x {params.index_path} \
-                  --rna-strandness RF --summary-file {output.log} \
-                  -1 {input.fq1} -2 {input.fq2} -S {output.sam}")
+           shell("hisat2 -p {threads} --dta -x {params.index_path}" + \
+                 " --rna-strandness RF --summary-file {output.log}" + \
+                 " -1 {input.fq1} -2 {input.fq2} -S {output.sam}")
         
 rule Samtool_sort:
    input:
@@ -107,7 +91,7 @@ rule Quantification:
     threads: workflow.cores * core_ratio
     message: ""
     shell:
-        "stringtie -p {threads} -e -G {input.GTF} -o {output} {params.Prefix} {input.bam}"
+        "stringtie -p {threads} -e -G {input.GTF} -o {output} -l {params.Prefix} {input.bam}"
 
 rule Result_assemble:
     input:
@@ -123,7 +107,7 @@ rule create_Preprocessing_log:
     input:
         expand(config["path"]["preprocessed_data"] + "{tissue}.filter.json", tissue = tissue_list)
     output:
-        temp("preprocessing_rate.txt")
+        out = temp("preprocessing_rate.txt")
     params:
         read_type = config["read_type"]
     message: ""
@@ -134,7 +118,7 @@ rule create_Mapping_log:
     input:
         expand(config["path"]["mapping_data"] + "{tissue}.log", tissue = tissue_list)
     output:
-        temp("mapping_rate.txt")
+        out = temp("mapping_rate.txt")
     message: ""
     script:
         "scripts/07_sub.Mapping_info.py"

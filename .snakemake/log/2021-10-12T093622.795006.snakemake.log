@@ -1,0 +1,3 @@
+NameError in line 49 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+name 'params' is not defined
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 49, in <module>

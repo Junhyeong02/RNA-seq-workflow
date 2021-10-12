@@ -1,0 +1,5 @@
+Sample	Number of mapped read	Alignment rate
+Leaf2	5093646	77.28
+Leaf3	4667296	75.07
+Leaf1	2472502	48.93
+Leaf4	4630795	74.96

@@ -1,6 +1,6 @@
 import json
 
-fw = open(snakemake.output, "w")
+fw = open(snakemake.output.out, "w")
 
 fw.write("Sample\tMean length of reads\tNumber of raw reads\tNumber of filtered reads\n")
 

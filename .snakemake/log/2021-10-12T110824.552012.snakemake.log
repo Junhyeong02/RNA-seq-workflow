@@ -1,0 +1,277 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+Mapping                         4              5              5
+Preprocessing                   4              5              5
+Quantification                  4              5              5
+Result_assemble                 1              1              1
+Samtool_sort                    4              5              5
+all                             1              1              1
+create_Mapping_log              1              1              1
+create_Preprocessing_log        1              1              1
+create_log                      1              1              1
+total                          21              1              5
+
+Select jobs to execute...
+
+[Tue Oct 12 11:08:25 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf1_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.html
+    jobid: 14
+    wildcards: filename=Leaf1
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:25 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf3_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.html
+    jobid: 10
+    wildcards: filename=Leaf3
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:25 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf4_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.html
+    jobid: 18
+    wildcards: filename=Leaf4
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:25 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf2_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.html
+    jobid: 5
+    wildcards: filename=Leaf2
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:46 2021]
+Finished job 14.
+1 of 21 steps (5%) done
+Select jobs to execute...
+
+[Tue Oct 12 11:08:46 2021]
+rule Mapping:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.sam, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.log
+    jobid: 13
+    wildcards: filename=Leaf1
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:50 2021]
+Finished job 18.
+2 of 21 steps (10%) done
+Select jobs to execute...
+
+[Tue Oct 12 11:08:50 2021]
+rule Mapping:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R2.filter.fastq.gz, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.sam, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.log
+    jobid: 17
+    wildcards: filename=Leaf4
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:51 2021]
+Finished job 10.
+3 of 21 steps (14%) done
+Select jobs to execute...
+
+[Tue Oct 12 11:08:51 2021]
+rule Mapping:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.sam, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.log
+    jobid: 9
+    wildcards: filename=Leaf3
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:53 2021]
+Finished job 5.
+4 of 21 steps (19%) done
+Select jobs to execute...
+
+[Tue Oct 12 11:08:53 2021]
+rule Mapping:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R2.filter.fastq.gz, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2, /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.sam, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.log
+    jobid: 4
+    wildcards: filename=Leaf2
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:59 2021]
+Finished job 9.
+5 of 21 steps (24%) done
+Select jobs to execute...
+[Tue Oct 12 11:08:59 2021]
+Finished job 17.
+6 of 21 steps (29%) done
+
+[Tue Oct 12 11:08:59 2021]
+rule Samtool_sort:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.sam
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.bam
+    jobid: 8
+    wildcards: filename=Leaf3
+    threads: 5
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+[Tue Oct 12 11:08:59 2021]
+Finished job 4.
+7 of 21 steps (33%) done
+[Tue Oct 12 11:08:59 2021]
+Finished job 13.
+8 of 21 steps (38%) done
+
+[Tue Oct 12 11:08:59 2021]
+rule Samtool_sort:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.sam
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.bam
+    jobid: 16
+    wildcards: filename=Leaf4
+    threads: 5
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+
+[Tue Oct 12 11:08:59 2021]
+rule Samtool_sort:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.sam
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.bam
+    jobid: 12
+    wildcards: filename=Leaf1
+    threads: 5
+    resources: tmpdir=/tmp
+
+
+[Tue Oct 12 11:08:59 2021]
+rule Samtool_sort:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.sam
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.bam
+    jobid: 3
+    wildcards: filename=Leaf2
+    threads: 5
+    resources: tmpdir=/tmp
+
+Select jobs to execute...
+Removing temporary output file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.sam.
+[Tue Oct 12 11:08:59 2021]
+Finished job 16.
+9 of 21 steps (43%) done
+Removing temporary output file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.sam.
+[Tue Oct 12 11:08:59 2021]
+Finished job 8.
+10 of 21 steps (48%) done
+
+[Tue Oct 12 11:08:59 2021]
+rule Quantification:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.bam, /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    jobid: 15
+    wildcards: filename=Leaf4
+    threads: 5
+    resources: tmpdir=/tmp
+
+
+[Tue Oct 12 11:08:59 2021]
+rule Quantification:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.bam, /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    jobid: 7
+    wildcards: filename=Leaf3
+    threads: 5
+    resources: tmpdir=/tmp
+
+Removing temporary output file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.sam.
+[Tue Oct 12 11:08:59 2021]
+Finished job 12.
+11 of 21 steps (52%) done
+Select jobs to execute...
+Removing temporary output file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.sam.
+[Tue Oct 12 11:08:59 2021]
+Finished job 3.
+12 of 21 steps (57%) done
+[Tue Oct 12 11:08:59 2021]
+Error in rule Quantification:
+    jobid: 7
+[Tue Oct 12 11:08:59 2021]
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+Error in rule Quantification:
+    shell:
+        stringtie -p 5 -e -G /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf -o /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.CaCM334.MYB.ReAnnot.chromosome.sort.gtf CaCM334 /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    jobid: 15
+
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    shell:
+        stringtie -p 5 -e -G /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf -o /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.CaCM334.MYB.ReAnnot.chromosome.sort.gtf CaCM334 /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+
+[Tue Oct 12 11:08:59 2021]
+rule Quantification:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.bam, /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    jobid: 11
+    wildcards: filename=Leaf1
+    threads: 5
+    resources: tmpdir=/tmp
+
+
+[Tue Oct 12 11:08:59 2021]
+rule create_Preprocessing_log:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json
+    output: preprocessing_rate.txt
+    jobid: 20
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:59 2021]
+rule create_Mapping_log:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.log
+    output: mapping_rate.txt
+    jobid: 21
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:08:59 2021]
+Error in rule Quantification:
+    jobid: 11
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.CaCM334.MYB.ReAnnot.chromosome.sort.gtf
+    shell:
+        stringtie -p 5 -e -G /var2/Work/Myung-Shin/RNA_Seq/02.Genome_data/CaCM334.MYB.ReAnnot.chromosome.sort.gtf -o /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.CaCM334.MYB.ReAnnot.chromosome.sort.gtf CaCM334 /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Oct 12 11:08:59 2021]
+Error in rule create_Preprocessing_log:
+    jobid: 20
+    output: preprocessing_rate.txt
+
+RuleException:
+CalledProcessError in line 113 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmpfgu20dyf.07_sub.READ_info.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 113, in __rule_create_Preprocessing_log
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+[Tue Oct 12 11:08:59 2021]
+Error in rule create_Mapping_log:
+    jobid: 21
+    output: mapping_rate.txt
+
+RuleException:
+CalledProcessError in line 122 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmp_vqt4378.07_sub.Mapping_info.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 122, in __rule_create_Mapping_log
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/log/2021-10-12T110824.552012.snakemake.log

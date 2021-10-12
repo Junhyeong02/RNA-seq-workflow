@@ -1,0 +1,99 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+Mapping                         4              5              5
+Preprocessing                   4              5              5
+Quantification                  4              5              5
+Result_assemble                 1              1              1
+Samtool_sort                    4              5              5
+all                             1              1              1
+create_Mapping_log              1              1              1
+create_Preprocessing_log        1              1              1
+create_log                      1              1              1
+total                          21              1              5
+
+Select jobs to execute...
+
+[Tue Oct 12 11:05:11 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf1_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.html
+    jobid: 14
+    wildcards: filename=Leaf1
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:05:11 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf3_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.html
+    jobid: 10
+    wildcards: filename=Leaf3
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:05:11 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf4_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.html
+    jobid: 18
+    wildcards: filename=Leaf4
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:05:11 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf2_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.html
+    jobid: 5
+    wildcards: filename=Leaf2
+    threads: 5
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:05:11 2021]
+Error in rule Preprocessing:
+    jobid: 18
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.html
+
+RuleException:
+CalledProcessError in line 46 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmpqub7rmr7.03.smk.fastp.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 46, in __rule_Preprocessing
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+[Tue Oct 12 11:05:11 2021]
+Error in rule Preprocessing:
+    jobid: 5
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.html
+
+[Tue Oct 12 11:05:11 2021]
+Error in rule Preprocessing:
+    jobid: 10
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.html
+
+[Tue Oct 12 11:05:11 2021]
+Error in rule Preprocessing:
+    jobid: 14
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.html
+
+RuleException:
+CalledProcessError in line 46 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmpmrvi_gvi.03.smk.fastp.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 46, in __rule_Preprocessing
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+RuleException:
+CalledProcessError in line 46 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmpuounl5_j.03.smk.fastp.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 46, in __rule_Preprocessing
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+RuleException:
+CalledProcessError in line 46 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmplte6nmle.03.smk.fastp.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 46, in __rule_Preprocessing
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/log/2021-10-12T110510.654420.snakemake.log

@@ -1,0 +1,496 @@
+Building DAG of jobs...
+candidate job all
+    wildcards: 
+candidate job Result_assemble
+    wildcards: filename=CM334.tissue
+candidate job Quantification
+    wildcards: filename=Leaf2
+candidate job Samtool_sort
+    wildcards: filename=Leaf2
+candidate job Mapping
+    wildcards: filename=Leaf2
+candidate job Preprocessing
+    wildcards: filename=Leaf2
+selected job Preprocessing
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R1.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf2
+selected job Preprocessing
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2_R2.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2:
+    Producer found, hence exceptions are ignored.
+
+selected job Mapping
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.sam:
+    Producer found, hence exceptions are ignored.
+
+selected job Samtool_sort
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.bam:
+    Producer found, hence exceptions are ignored.
+
+selected job Quantification
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.CaCM334.MYB.ReAnnot.chromosome.sort.gtf:
+    Producer found, hence exceptions are ignored.
+
+candidate job Quantification
+    wildcards: filename=Leaf3
+candidate job Samtool_sort
+    wildcards: filename=Leaf3
+candidate job Mapping
+    wildcards: filename=Leaf3
+candidate job Preprocessing
+    wildcards: filename=Leaf3
+selected job Preprocessing
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf3
+selected job Preprocessing
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2:
+    Producer found, hence exceptions are ignored.
+
+selected job Mapping
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.sam:
+    Producer found, hence exceptions are ignored.
+
+selected job Samtool_sort
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.bam:
+    Producer found, hence exceptions are ignored.
+
+selected job Quantification
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.CaCM334.MYB.ReAnnot.chromosome.sort.gtf:
+    Producer found, hence exceptions are ignored.
+
+candidate job Quantification
+    wildcards: filename=Leaf1
+candidate job Samtool_sort
+    wildcards: filename=Leaf1
+candidate job Mapping
+    wildcards: filename=Leaf1
+candidate job Preprocessing
+    wildcards: filename=Leaf1
+selected job Preprocessing
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf1
+selected job Preprocessing
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2:
+    Producer found, hence exceptions are ignored.
+
+selected job Mapping
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.sam:
+    Producer found, hence exceptions are ignored.
+
+selected job Samtool_sort
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.bam:
+    Producer found, hence exceptions are ignored.
+
+selected job Quantification
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.CaCM334.MYB.ReAnnot.chromosome.sort.gtf:
+    Producer found, hence exceptions are ignored.
+
+candidate job Quantification
+    wildcards: filename=Leaf4
+candidate job Samtool_sort
+    wildcards: filename=Leaf4
+candidate job Mapping
+    wildcards: filename=Leaf4
+candidate job Preprocessing
+    wildcards: filename=Leaf4
+selected job Preprocessing
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R1.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf4
+selected job Preprocessing
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4_R2.filter.fastq.gz:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.1.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.2.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.3.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.4.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.5.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.6.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.7.ht2:
+    Producer found, hence exceptions are ignored.
+
+candidate job Indexing
+    wildcards: 
+selected job Indexing
+    wildcards: 
+file /var2/Work/Myung-Shin/RNA_Seq/03.Genome_Index/Annuum.v1.6.Total.8.ht2:
+    Producer found, hence exceptions are ignored.
+
+selected job Mapping
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.sam:
+    Producer found, hence exceptions are ignored.
+
+selected job Samtool_sort
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.bam:
+    Producer found, hence exceptions are ignored.
+
+selected job Quantification
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.CaCM334.MYB.ReAnnot.chromosome.sort.gtf:
+    Producer found, hence exceptions are ignored.
+
+selected job Result_assemble
+    wildcards: filename=CM334.tissue
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/05.FPKM_TPM/CM334.tissue.TPM.txt:
+    Producer found, hence exceptions are ignored.
+
+candidate job create_log
+    wildcards: filename=CM334.tissue
+candidate job create_Preprocessing_log
+    wildcards: 
+candidate job Preprocessing
+    wildcards: filename=Leaf2
+selected job Preprocessing
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf3
+selected job Preprocessing
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf1
+selected job Preprocessing
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json:
+    Producer found, hence exceptions are ignored.
+
+candidate job Preprocessing
+    wildcards: filename=Leaf4
+selected job Preprocessing
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json:
+    Producer found, hence exceptions are ignored.
+
+selected job create_Preprocessing_log
+    wildcards: 
+file preprocessing_rate.txt:
+    Producer found, hence exceptions are ignored.
+
+candidate job create_Mapping_log
+    wildcards: 
+candidate job Mapping
+    wildcards: filename=Leaf2
+selected job Mapping
+    wildcards: filename=Leaf2
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.log:
+    Producer found, hence exceptions are ignored.
+
+candidate job Mapping
+    wildcards: filename=Leaf3
+selected job Mapping
+    wildcards: filename=Leaf3
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.log:
+    Producer found, hence exceptions are ignored.
+
+candidate job Mapping
+    wildcards: filename=Leaf1
+selected job Mapping
+    wildcards: filename=Leaf1
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.log:
+    Producer found, hence exceptions are ignored.
+
+candidate job Mapping
+    wildcards: filename=Leaf4
+selected job Mapping
+    wildcards: filename=Leaf4
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.log:
+    Producer found, hence exceptions are ignored.
+
+selected job create_Mapping_log
+    wildcards: 
+file mapping_rate.txt:
+    Producer found, hence exceptions are ignored.
+
+selected job create_log
+    wildcards: filename=CM334.tissue
+file /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/05.FPKM_TPM/CM334.tissue.log.txt:
+    Producer found, hence exceptions are ignored.
+
+selected job all
+    wildcards: 
+file None:
+    Producer found, hence exceptions are ignored.
+
+Using shell: /bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+Mapping                         4             20             20
+Preprocessing                   4             10             10
+Quantification                  4             20             20
+Result_assemble                 1              1              1
+Samtool_sort                    4             20             20
+all                             1              1              1
+create_Mapping_log              1              1              1
+create_Preprocessing_log        1              1              1
+create_log                      1              1              1
+total                          21              1             20
+
+Select jobs to execute...
+
+[Fri Oct  8 11:04:30 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf1_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.html
+    jobid: 14
+    wildcards: filename=Leaf1
+    threads: 10
+    resources: tmpdir=/tmp
+
+[Fri Oct  8 11:04:30 2021]
+rule Preprocessing:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/00.Raw_data/Leaf3_R1.fastq.gz
+    output: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R1.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3_R2.filter.fastq.gz, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.html
+    jobid: 10
+    wildcards: filename=Leaf3
+    threads: 10
+    resources: tmpdir=/tmp
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/log/2021-10-08T110430.084415.snakemake.log

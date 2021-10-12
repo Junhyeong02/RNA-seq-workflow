@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count    min threads    max threads
+------------------------  -------  -------------  -------------
+all                             1              1              1
+create_Mapping_log              1              1              1
+create_Preprocessing_log        1              1              1
+create_log                      1              1              1
+total                           4              1              1
+
+Select jobs to execute...
+
+[Tue Oct 12 11:31:23 2021]
+rule create_Preprocessing_log:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf2.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf3.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf1.filter.json, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/Leaf4.filter.json
+    output: preprocessing_rate.txt
+    jobid: 20
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:31:23 2021]
+rule create_Mapping_log:
+    input: /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf2.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf3.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf1.log, /var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/Leaf4.log
+    output: mapping_rate.txt
+    jobid: 21
+    resources: tmpdir=/tmp
+
+[Tue Oct 12 11:31:23 2021]
+Finished job 20.
+1 of 4 steps (25%) done
+[Tue Oct 12 11:31:23 2021]
+Error in rule create_Mapping_log:
+    jobid: 21
+    output: mapping_rate.txt
+
+RuleException:
+CalledProcessError in line 122 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Command 'set -euo pipefail;  /home/exeman/miniconda2/envs/KJH3.9.5/bin/python3.9 /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/scripts/tmpy97ixsl2.07_sub.Mapping_info.py' returned non-zero exit status 1.
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 122, in __rule_create_Mapping_log
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+Removing output files of failed job create_Mapping_log since they might be corrupted:
+mapping_rate.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /var2/Work/Kong_Junhyeong/RNA_Seq/.snakemake/log/2021-10-12T113122.744889.snakemake.log

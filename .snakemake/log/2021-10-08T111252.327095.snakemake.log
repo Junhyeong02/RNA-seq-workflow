@@ -1,0 +1,8 @@
+TypeError in line 43 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+expected str, bytes or os.PathLike object, not builtin_function_or_method
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 43, in <module>
+  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 43, in <lambda>
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 424, in check_output
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 505, in run
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 951, in __init__
+  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 1754, in _execute_child

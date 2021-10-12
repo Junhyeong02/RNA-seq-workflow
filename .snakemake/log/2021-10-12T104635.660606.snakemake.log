@@ -1,0 +1,2 @@
+SyntaxError in line 55 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
+Multiple run or shell keywords in rule Preprocessing. (Snakefile, line 55)

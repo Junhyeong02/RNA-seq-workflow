@@ -2,7 +2,7 @@ import sys
 import os
 from glob import glob
 
-fw = open(snakemake.output, "w")
+fw = open(snakemake.output.out, "w")
 
 fw.write("Sample\tNumber of mapped read\tAlignment rate\n")
 
