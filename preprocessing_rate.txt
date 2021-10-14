@@ -1,5 +1,0 @@
-Sample	Mean length of reads	Number of raw reads	Number of filtered reads
-Leaf2	51	6617326	6590994
-Leaf3	51	6251422	6217250
-Leaf1	51	5085841	5053492
-Leaf4	51	6194698	6177789
