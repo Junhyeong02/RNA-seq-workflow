@@ -1,5 +1,0 @@
-CalledProcessError in line 46 of /var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile:
-Command '['gunzip', '-c', '{input.fq}', '|head', '-n', '1000', '|', 'sed', '-n', "'4~4p'", '|tr', '-d', "'\\n'"]' returned non-zero exit status 1.
-  File "/var2/Work/Kong_Junhyeong/RNA_Seq/Snakefile", line 46, in <module>
-  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 424, in check_output
-  File "/home/exeman/miniconda2/envs/KJH3.9.5/lib/python3.9/subprocess.py", line 528, in run
