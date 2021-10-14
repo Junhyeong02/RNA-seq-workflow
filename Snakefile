@@ -97,6 +97,9 @@ rule Result_assemble:
     output:
         FPKM = config["path"]["exp_data"] + "{filename}.FPKM.txt",
         TPM  = config["path"]["exp_data"] + "{filename}.TPM.txt"
+    params:
+        gtf_path = config["path"]["mapping_data"],
+        target_gtf = config["target_gtf"]
     message: ""
     script:
         "scripts/smk.result.py"
