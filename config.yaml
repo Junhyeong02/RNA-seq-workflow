@@ -11,6 +11,7 @@ path:
   preprocessed_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/01.Preprocessing/"
   mapping_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/04.Mapping/"
   exp_data: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/05.FPKM_TPM/"
+  log: "/var2/Work/Kong_Junhyeong/RNA_Seq/CM334_Leaf/06.Log/"
 
 fastp:
   Qcut: 20

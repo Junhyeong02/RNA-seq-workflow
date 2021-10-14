@@ -2,20 +2,18 @@
 
 import sys
 import subprocess
-import numpy as np
-import pandas as pd
 from glob import glob
 
 configfile: "config.yaml"
 
 fastq = list(glob(config["path"]["raw_data"] + "*_R1.fastq.gz"))
-tissue_list = [fq.split("/")[-1].replace("_R1.fastq.gz", "") for fq in fastq]
+tissue_list = sorted([fq.split("/")[-1].replace("_R1.fastq.gz", "") for fq in fastq])
 core_ratio = 1/len(tissue_list)
 
 rule all:
     input:
         config["path"]["exp_data"] + "CM334.tissue.TPM.txt",
-        config["path"]["exp_data"] + "CM334.tissue.log.txt"
+        config["path"]["log"] + "CM334.tissue.log.txt"
 
 rule Indexing:
     input:
@@ -45,7 +43,7 @@ rule Preprocessing:
     threads: workflow.cores * core_ratio
     message: ""
     script:
-        "scripts/03.smk.fastp.py"
+        "scripts/smk.fastp.py"
 
 rule Mapping:
     input:
@@ -101,49 +99,35 @@ rule Result_assemble:
         TPM  = config["path"]["exp_data"] + "{filename}.TPM.txt"
     message: ""
     script:
-        "scripts/06_sub.FPKM_TPM.py"
+        "scripts/smk.result.py"
 
 rule create_Preprocessing_log:
     input:
         expand(config["path"]["preprocessed_data"] + "{tissue}.filter.json", tissue = tissue_list)
     output:
-        out = temp("preprocessing_rate.txt")
+        out = config["path"]["log"] + "preprocessing_rate.txt"
     params:
         read_type = config["read_type"]
     message: ""
     script:
-        "scripts/07_sub.READ_info.py"
+        "scripts/smk.read_info.py"
 
 rule create_Mapping_log:
     input:
         expand(config["path"]["mapping_data"] + "{tissue}.log", tissue = tissue_list)
     output:
-        out = temp("mapping_rate.txt")
+        out = config["path"]["log"] + "mapping_rate.txt"
     message: ""
     script:
-        "scripts/07_sub.Mapping_info.py"
+        "scripts/smk.mapping_info.py"
 
 rule create_log:
     input:
-        pre = "preprocessing_rate.txt",
-        mapping = "mapping_rate.txt"
+        pre = config["path"]["log"] + "preprocessing_rate.txt",
+        mapping = config["path"]["log"] + "mapping_rate.txt"
     output:
-        config["path"]["exp_data"] + "{filename}.log.txt"
+        config["path"]["log"] + "{filename}.log.txt"
     message: ""
-    run:
-        pre_df = pd.read_csv(input.pre, sep = "\t", index_col = "Sample")
-        map_df = pd.read_csv(input.mapping, sep = "\t", index_col = "Sample")
-        df = pd.merge(pre_df, map_df, on = "Sample", how = "inner")
-        df = df[["Sample", "Mean length of reads", "Number of raw reads", "Number of filtered reads", \
-                 "Number of mapped read", "LAlignment rate"]]
-        df.to_csv("{output}", sep = "\t", index = None)
-
-# rule Average: 
-#     input:
-#         Exp_data = config["path"]["exp_data"] + "{filename}.txt",
-#         Sample_group_data = "sample_group.txt"
-#     output:
-#         config["path"]["exp_data"] + "{filename}.avg.txt"
-#     script:
-#         "scripts/06_sub.Average.py"
+    script:
+        "scripts/smk.create_log.py"
 
