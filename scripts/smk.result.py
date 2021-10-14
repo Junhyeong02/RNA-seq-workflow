@@ -1,10 +1,11 @@
 from glob import glob
 
-GTF_PATH = "04.Mapping/"
+GTF_PATH = snakemake.params.gtf_path
+target_gft = snakemake.params.target_gtf + ".gtf"
 
-gtf_list = snakemake.input
+gtf_list = sorted(snakemake.input)
 
-HEADER = "GeneID\t" + '\t'.join([gtf.replace(GTF_PATH, "") for gtf in gtf_list])
+HEADER = "GeneID\t" + '\t'.join([gtf.replace(GTF_PATH, "").replace(target_gtf, "") for gtf in gtf_list])
 
 PATH_FPKM = snakemake.output.FPKM
 PATH_TPM = snakemake.output.TPM
