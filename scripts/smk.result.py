@@ -1,7 +1,7 @@
 from glob import glob
 
 GTF_PATH = snakemake.params.gtf_path
-target_gft = snakemake.params.target_gtf + ".gtf"
+target_gtf = snakemake.params.target_gtf + ".gtf"
 
 gtf_list = sorted(snakemake.input)
 
