@@ -35,7 +35,7 @@ rule Preprocessing:
         json = config["path"]["preprocessed_data"] + "{filename}.filter.json",
         html = config["path"]["preprocessed_data"] + "{filename}.filter.html"
     params:
-        pair = config["path"]["raw_data"] + "{wildcards.filename}_R2.fastq.gz",
+        pair = config["path"]["raw_data"] + "{filename}_R2.fastq.gz",
         qcut = config["fastp"]["Qcut"],
         cut_ratio = config["fastp"]["cut_ratio"],
         read_type = config["read_type"]
